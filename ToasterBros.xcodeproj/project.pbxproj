@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1718DC5A1DBF07D9006C5379 /* harbaugh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1718DC591DBF07D9006C5379 /* harbaugh.jpg */; };
 		177B66AB1D984E800011EE8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B66AA1D984E800011EE8A /* AppDelegate.swift */; };
 		177B66AD1D984E800011EE8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B66AC1D984E800011EE8A /* ViewController.swift */; };
 		177B66B01D984E800011EE8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 177B66AE1D984E800011EE8A /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1718DC591DBF07D9006C5379 /* harbaugh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = harbaugh.jpg; sourceTree = "<group>"; };
 		177B66A71D984E800011EE8A /* ToasterBros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToasterBros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		177B66AA1D984E800011EE8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		177B66AC1D984E800011EE8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		177B66A91D984E800011EE8A /* ToasterBros */ = {
 			isa = PBXGroup;
 			children = (
+				1718DC591DBF07D9006C5379 /* harbaugh.jpg */,
 				177B66AA1D984E800011EE8A /* AppDelegate.swift */,
 				177B66AC1D984E800011EE8A /* ViewController.swift */,
 				177B66AE1D984E800011EE8A /* Main.storyboard */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				177B66B51D984E800011EE8A /* LaunchScreen.storyboard in Resources */,
+				1718DC5A1DBF07D9006C5379 /* harbaugh.jpg in Resources */,
 				177B66B21D984E800011EE8A /* Assets.xcassets in Resources */,
 				177B66B01D984E800011EE8A /* Main.storyboard in Resources */,
 			);
