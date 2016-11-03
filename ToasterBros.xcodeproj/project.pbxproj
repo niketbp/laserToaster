@@ -16,6 +16,7 @@
 		177B66B51D984E800011EE8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 177B66B31D984E800011EE8A /* LaunchScreen.storyboard */; };
 		177B66C01D984E800011EE8A /* ToasterBrosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B66BF1D984E800011EE8A /* ToasterBrosTests.swift */; };
 		177B66CB1D984E800011EE8A /* ToasterBrosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B66CA1D984E800011EE8A /* ToasterBrosUITests.swift */; };
+		17B008C21DCAB4870079E7BF /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B008C11DCAB4870079E7BF /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		177B66C61D984E800011EE8A /* ToasterBrosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToasterBrosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		177B66CA1D984E800011EE8A /* ToasterBrosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToasterBrosUITests.swift; sourceTree = "<group>"; };
 		177B66CC1D984E800011EE8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B008C11DCAB4870079E7BF /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				1718DC651DBFFEBF006C5379 /* Scribblable.swift */,
+				17B008C11DCAB4870079E7BF /* File.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				177B66AD1D984E800011EE8A /* ViewController.swift in Sources */,
+				17B008C21DCAB4870079E7BF /* File.swift in Sources */,
 				177B66AB1D984E800011EE8A /* AppDelegate.swift in Sources */,
 				1718DC661DBFFEBF006C5379 /* Scribblable.swift in Sources */,
 			);

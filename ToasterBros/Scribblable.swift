@@ -34,11 +34,11 @@ class ScribbleView: UIView
         
         backgroundLayer.strokeColor = UIColor.darkGray.cgColor
         backgroundLayer.fillColor = nil
-        backgroundLayer.lineWidth = 5
+        backgroundLayer.lineWidth = 10
         
         drawingLayer.strokeColor = UIColor.black.cgColor
         drawingLayer.fillColor = nil
-        drawingLayer.lineWidth = 5
+        drawingLayer.lineWidth = 10
         
         layer.addSublayer(backgroundLayer)
         layer.addSublayer(drawingLayer)
@@ -72,38 +72,43 @@ class ScribbleView: UIView
 
 class SimpleScribbleView: ScribbleView, Scribblable
 {
-    let simplePath = UIBezierPath()
+    let path = UIBezierPath()
+    var interpolationPoints = [CGPoint]()
     
     func beginScribble(_ point: CGPoint)
     {
-        simplePath.removeAllPoints()
-        
-        simplePath.move(to: point)
+        interpolationPoints = [point]
     }
     
     func appendScribble(_ point: CGPoint)
     {
-        simplePath.addLine(to: point)
+        interpolationPoints.append(point)
         
-        drawingLayer.path = simplePath.cgPath
+        path.removeAllPoints()
+        path.interpolatePointsWithHermite(interpolationPoints: interpolationPoints)
+        
+        drawingLayer.path = path.cgPath
     }
     
     func endScribble()
     {
         if let backgroundPath = backgroundLayer.path
         {
-            simplePath.append(UIBezierPath(cgPath: backgroundPath))
+            path.append(UIBezierPath(cgPath: backgroundPath))
         }
         
-        backgroundLayer.path = simplePath.cgPath
+        backgroundLayer.path = path.cgPath
         
-        simplePath.removeAllPoints()
+        path.removeAllPoints()
         
-        drawingLayer.path = simplePath.cgPath
+        drawingLayer.path = path.cgPath
     }
     
     func clearScribble()
     {
         backgroundLayer.path = nil
     }
+    
+    
+    
 }

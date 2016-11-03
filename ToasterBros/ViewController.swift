@@ -10,85 +10,34 @@ import UIKit
 import CoreGraphics
 
 class ViewController: UIViewController {
-
-    /*@IBOutlet weak var label1: UILabel!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let image = UIImage(named: "harbaugh.png")
-        let data = UIImageJPEGRepresentation(image!, 1.0);
-        let array = getArrayOfBytesFromImage(imageData: data!)
-        
-        let imageWidth = (image?.size.width)! * (image?.scale)!
-        let imageHeight = (image?.size.height)! * (image?.scale)!
-
-        let w:Int = Int(imageWidth)
-        let h:Int = Int(imageHeight)
-        
-        var twoDeeArray = Array(repeating: Array(repeating: 0, count: w), count: h)
-
-        
-        for i in 0..<h{
-            for j in 0..<w{
-                twoDeeArray[i][j] = array[j + i*w] as! Int
-            }
-        }
-        
-        for i in 0..<h{
-            for j in 0..<w{
-                print(twoDeeArray[i][j], terminator: "")
-                print(", ", terminator: "")
-            }
-            print()
-            print()
-        }
-        
-        //do some shit with twoDeeArray
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func getArrayOfBytesFromImage(imageData:Data) -> NSMutableArray
-    {
-        
-        // the number of elements:
-        let count = imageData.count / MemoryLayout<UInt8>.size
-        
-        // create array of appropriate length:
-        var bytes = [UInt8](repeating: 0, count: count)
-        
-        // copy bytes into array
-        imageData.copyBytes(to: &bytes, count:count * MemoryLayout<UInt8>.size)
-        
-        let byteArray:NSMutableArray = NSMutableArray()
-        
-        for i in 0..<count {
-            byteArray.add(NSNumber(value: bytes[i]))
-        }
-        
-        return byteArray
-        
-        
-    }*/
-    
-    
     
     let stackView = UIStackView()
     
     let simpleScribbleView = SimpleScribbleView(title: "")
     
-    
     var touchOrigin: ScribbleView?
+    
+    
+    @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    
     
     @IBAction func clearButton(_ sender: UIButton) {
         
         simpleScribbleView.clearScribble()
+        
+    }
+    @IBAction func startButton(_ sender: AnyObject) {
+        
+        clearButton.isHidden = false
+        sendButton.isHidden = false
+        startButton.isHidden = true
+        
+        view.addSubview(stackView)
+        
+        stackView.addArrangedSubview(simpleScribbleView)
+        
         
     }
     
@@ -96,9 +45,7 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        view.addSubview(stackView)
         
-        stackView.addArrangedSubview(simpleScribbleView)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
