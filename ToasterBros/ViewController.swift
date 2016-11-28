@@ -17,11 +17,13 @@ class ViewController: UIViewController {
     
     var touchOrigin: ScribbleView?
     
-    
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     
+    @IBAction func sendButton(_ sender: AnyObject) {
+        simpleScribbleView.saveScribble()
+    }
     
     @IBAction func clearButton(_ sender: UIButton) {
         
