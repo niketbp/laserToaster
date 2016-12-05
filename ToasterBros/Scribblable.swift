@@ -29,13 +29,13 @@ class ScribbleView: UIView {
     required init(title: String) {
         super.init(frame: CGRect.zero)
         
-        backgroundLayer.strokeColor = UIColor.darkGray.cgColor
+        backgroundLayer.strokeColor = UIColor.yellow.cgColor
         backgroundLayer.fillColor = nil
-        backgroundLayer.lineWidth = 10
+        backgroundLayer.lineWidth = 20
         
-        drawingLayer.strokeColor = UIColor.black.cgColor
+        drawingLayer.strokeColor = UIColor.gray.cgColor
         drawingLayer.fillColor = nil
-        drawingLayer.lineWidth = 10
+        drawingLayer.lineWidth = 20
         
         layer.addSublayer(backgroundLayer)
         layer.addSublayer(drawingLayer)
@@ -45,7 +45,7 @@ class ScribbleView: UIView {
         titleLabel.textColor = UIColor.blue
         addSubview(titleLabel)
         
-        layer.borderColor = UIColor.blue.cgColor
+        layer.borderColor = UIColor.white.cgColor
         layer.borderWidth = 1
         
         layer.masksToBounds = true
@@ -99,8 +99,8 @@ class SimpleScribbleView: ScribbleView, Scribblable {
     }
     
     func saveScribble() {
-        let pixelWidthCount = 150
-        let pixelHeightCount = 150
+        /*let pixelWidthCount = 100
+        let pixelHeightCount = 100
         
         let pixelWidth = CGFloat(pixelWidthCount)
         let pixelHeight = CGFloat(pixelHeightCount)
@@ -118,20 +118,50 @@ class SimpleScribbleView: ScribbleView, Scribblable {
         
         var image = [[Int]](repeating: [Int](repeating: 0, count: pixelHeightCount), count: pixelWidthCount)
         
-        while (i < frameWidth){
-            while (j < frameHeight){
-                if (backgroundLayer.path!.contains(CGPoint(x: Int(i), y: Int(j)))){
+        while (i < frameHeight){
+            while (j < frameWidth){
+                if (backgroundLayer.path!.contains(CGPoint(x: Int(j), y: Int(i)))){
                     image[m][n] = 1
                 }
-                print(image[m][n], terminator: "")
+                //print(image[m][n], terminator: "")
                 n += 1
-                j += heightIncrement
+                j += widthIncrement
             }
-            print("")
+            //print("")
             m += 1
             n = 0
-            i += widthIncrement
+            i += heightIncrement
             j = 0
+        }*/
+        
+        
+        let pixelWidth = Int(layer.frame.width)
+        let pixelHeight = Int(layer.frame.height)
+        
+        let imageWidth = 360
+        let imageHeight = 360
+        
+        var image = [[Int]](repeating: [Int](repeating: 0, count: imageHeight), count: imageWidth)
+        var startingI: Int = Int(imageWidth-pixelWidth)/2
+        var startingJ: Int = (imageHeight-pixelHeight)/2
+        
+        for i in 0..<pixelHeight{
+            for j in 0..<pixelWidth{
+                if (backgroundLayer.path!.contains(CGPoint(x: j, y: i))){
+                    image[startingJ][startingI] = 1
+                }
+                startingJ += 1
+            }
+            startingI += 1
+            startingJ = 0
+        }
+        
+        
+        for x in 0..<imageHeight{
+            for y in 0..<imageWidth{
+                print(image[y][x], terminator: "")
+            }
+            print("")
         }
         
         /*
