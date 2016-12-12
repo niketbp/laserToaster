@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var sliderLabel: UILabel!
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var photoasterImage: UIImageView!
     
     @IBAction func sendButton(_ sender: AnyObject) {
         simpleScribbleView.saveScribble()
@@ -35,12 +38,20 @@ class ViewController: UIViewController {
         clearButton.isHidden = false
         sendButton.isHidden = false
         startButton.isHidden = true
+        sliderLabel.isHidden = false
+        slider.isHidden = false
+        photoasterImage.isHidden = true
         
         view.addSubview(stackView)
         
         stackView.addArrangedSubview(simpleScribbleView)
         
         
+    }
+    
+    @IBAction func setLineWidth(_ sender: UISlider) {
+        let sliderWidth = Int(sender.value)
+        simpleScribbleView.setLineWidth(width: sliderWidth)
     }
     
     override func viewDidLoad()

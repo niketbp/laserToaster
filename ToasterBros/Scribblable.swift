@@ -31,11 +31,11 @@ class ScribbleView: UIView {
         
         backgroundLayer.strokeColor = UIColor.yellow.cgColor
         backgroundLayer.fillColor = nil
-        backgroundLayer.lineWidth = 20
+        backgroundLayer.lineWidth = 5
         
         drawingLayer.strokeColor = UIColor.gray.cgColor
         drawingLayer.fillColor = nil
-        drawingLayer.lineWidth = 20
+        drawingLayer.lineWidth = 5
         
         layer.addSublayer(backgroundLayer)
         layer.addSublayer(drawingLayer)
@@ -80,6 +80,11 @@ class SimpleScribbleView: ScribbleView, Scribblable {
         path.interpolatePointsWithHermite(interpolationPoints: interpolationPoints)
         
         drawingLayer.path = path.cgPath
+    }
+    
+    func setLineWidth(width : Int){
+        drawingLayer.lineWidth = CGFloat(width)
+        backgroundLayer.lineWidth = CGFloat(width)
     }
     
     func endScribble() {
@@ -183,3 +188,6 @@ class SimpleScribbleView: ScribbleView, Scribblable {
     }
     
 }
+
+
+

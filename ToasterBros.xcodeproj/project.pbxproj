@@ -16,6 +16,7 @@
 		177B66B51D984E800011EE8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 177B66B31D984E800011EE8A /* LaunchScreen.storyboard */; };
 		177B66C01D984E800011EE8A /* ToasterBrosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B66BF1D984E800011EE8A /* ToasterBrosTests.swift */; };
 		177B66CB1D984E800011EE8A /* ToasterBrosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B66CA1D984E800011EE8A /* ToasterBrosUITests.swift */; };
+		178D24BD1DFC94AB005952FE /* logo_photoaster2.png in Resources */ = {isa = PBXBuildFile; fileRef = 178D24BC1DFC94AB005952FE /* logo_photoaster2.png */; };
 		17B008C21DCAB4870079E7BF /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B008C11DCAB4870079E7BF /* File.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		177B66C61D984E800011EE8A /* ToasterBrosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToasterBrosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		177B66CA1D984E800011EE8A /* ToasterBrosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToasterBrosUITests.swift; sourceTree = "<group>"; };
 		177B66CC1D984E800011EE8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		178D24BC1DFC94AB005952FE /* logo_photoaster2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_photoaster2.png; sourceTree = "<group>"; };
 		17B008C11DCAB4870079E7BF /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 		177B66A91D984E800011EE8A /* ToasterBros */ = {
 			isa = PBXGroup;
 			children = (
+				178D24BC1DFC94AB005952FE /* logo_photoaster2.png */,
 				1718DC641DBFFE9A006C5379 /* extensions */,
 				1718DC5B1DBF0C53006C5379 /* harbaugh.png */,
 				177B66AA1D984E800011EE8A /* AppDelegate.swift */,
@@ -255,6 +258,7 @@
 				177B66B51D984E800011EE8A /* LaunchScreen.storyboard in Resources */,
 				1718DC5C1DBF0C53006C5379 /* harbaugh.png in Resources */,
 				177B66B21D984E800011EE8A /* Assets.xcassets in Resources */,
+				178D24BD1DFC94AB005952FE /* logo_photoaster2.png in Resources */,
 				177B66B01D984E800011EE8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
